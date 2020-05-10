@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for product in stocks %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="mr-2" href="#">{{ product.id }}</a>
+            <small class="text-muted">{{ product.brand }}</small>
+          </div>
+          <h2><a class="product-brand" href="#">{{ product.title }}</a></h2>
+          <p class="imgUrl">{{ product.imgUrl }}</p>
+        </div>
+      </article>
+      
+    {% endfor %}
+{% endblock content %}
